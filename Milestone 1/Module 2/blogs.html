@@ -8,14 +8,36 @@
     <title>Explore basic CSS</title>
 
     <style>
-        ul{
+        ul {
             color: blue;
         }
-        p{
+
+        p {
             font-style: italic;
             background-color: antiquewhite;
-            width:  40%;      
-          }
+            width: 40%;
+        }
+
+        #colorr {
+            border-collapse: collapse;
+            color: rgb(183, 29, 214);
+
+        }
+
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(233, 9, 9, 0.1);
+        }
+
+        .member{
+            
+            font-style: inherit;
+            color: deeppink;
+        }
     </style>
 </head>
 
@@ -25,11 +47,30 @@
 
     <p>Good morning everyone.</p>
 
+    <table id="colorr">
+        <tr>
+            <td>Alfreds Futterkiste <br></td>
+            <td>Maria Anders <br></td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td> Centro comercial</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+    </table>
+
     <ul>
         <li>Inline</li>
         <li>Internal</li>
         <li>External</li>
     </ul>
+    <br>
+
+    <ol class="member">
+        <li>How are you?</li>
+        <li>What's your Name?</li>
+    </ol>
 </body>
 
 </html>
