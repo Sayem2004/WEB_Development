@@ -1,6 +1,17 @@
 
 .header{
-    height: 300px;
+    color: rgb(240, 158, 16);
+    height: 400px;
+    /* width: 1000px; */
+    background-image: url('../pictures/photo-1736914319111-d54ada582633.avif') ;
+    /* background-repeat: no-repeat; */
+    /* background-repeat: repeat-x; */
+    /* background-repeat: repeat-y; */
+    /* background-size: cover; */
+    background-size: contain;
+
+
+
 }
 
 h3{
