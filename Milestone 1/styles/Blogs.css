@@ -1,41 +1,47 @@
 nav ul {
     text-align: right;
 }
-nav li{
+
+nav li {
     list-style: none;
     display: inline;
     margin-right: 15px;
     font-size: 30px;
-    font-weight: bold; 
-    
+    font-weight: bold;
+
 }
 
-nav li :hover{
+nav li :hover {
     background-color: aqua;
     color: rgb(245, 10, 10);
     font-size: 30px;
 }
-nav li a{
+
+nav li a {
     text-decoration: none;
 }
 
-.imgsiz{
+.imgsiz {
     height: 400px;
     width: 50%;
-       
-   
+
+
 }
-footer{
+
+footer {
     text-align: center;
 }
 
 main p {
     text-align: justify;
-    line-height: 1.5;     
-    font-size: 18px;      
+    line-height: 1.5;
+    font-size: 18px;
 }
- article {
+
+article {
     margin: 30px;
-   border: 3px solid rgb(30, 202, 30);
-   padding: 15px ;
- }
+    border: 3px solid rgb(30, 202, 30);
+    padding: 15px;
+    box-shadow: 5px 5px 5px rgb(155, 221, 13);
+
+}
