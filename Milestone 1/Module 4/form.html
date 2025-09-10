@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form </title>
+
+    <style>
+        fieldset.basic-info label{
+            display: block;
+        }
+    </style>
+    
 </head>
 <body>
     <header>
-        <nav>
+        <!-- <nav>
             <ul>
-                <!-- <li> <a href="">Home</li> -->
+                <li> <a href="">Home</li>
             </ul><br>
-        </nav>
+        </nav> -->
     </header>
 
 
@@ -19,13 +26,68 @@
 
     <main>
         <section>
-            <h2> Pitha Ghor Registration </h2>
+            <h2>Registration Form </h2>
+
+            <form>
+                <fieldset class="basic-info">
+                    <legend>Basic info </legend>
+                    <label for="name">Enter Your Full Name: </label>
+                <input type="text" name="" id="name">
+             
+                <label for="email">Enter Your Email Address: </label>
+                <input type="email" name="" id="email">
+                
+                
+                <label for="password">Enter Your Password</label>
+                <input type="password" name="" id="password">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Pitha Information</legend>
+
+                    <input type="radio" name="Pitha" id="Chitoy">
+                    <label for="Chitoy">Chitoy</label>
+
+                    <input type="radio" name="Pitha" id="Vapa">
+                    <label for="Vapa">Vapa</label>
+
+                    <input type="radio" name="Pitha" id="Puri">
+                    <label for="Puri">Dal Puri</label>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Vorta selection</legend>
+
+                    <input type="checkbox" name="" id="Sorisa">
+                    <label for="Sorisa">Sorisa</label>
+
+                    <input type="checkbox" name="" id="Shuthki">
+                    <label for="Shuthki">Shuthki</label>
+
+                    <input type="checkbox" name="" id="Dal">
+                    <label for="Dal">Dal</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Extra Information</legend>
+                    <textarea name="" id="" cols="30" rows="4"></textarea>
+                </fieldset>
+
+                <input type="submit" value="submit">
+                <input type="reset" value="Clear">
+
+            </form>
         </section>
     </main>
 
 
 
     <footer></footer>
+
+
+
+    
 
 </body>
 </html>

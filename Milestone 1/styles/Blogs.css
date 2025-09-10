@@ -40,8 +40,8 @@ main p {
 
 article {
     margin: 30px;
-    border: 3px solid rgb(30, 202, 30);
+    border: 5px solid rgb(255, 0, 0);
     padding: 15px;
-    box-shadow: 5px 5px 5px rgb(155, 221, 13);
+    box-shadow: 15px 15px 15px rgb(6, 21, 233);
 
 }
