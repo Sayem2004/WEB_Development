@@ -5,7 +5,13 @@ nav ul{
 nav li{
     list-style: none;
     margin: 10px;
+    font-size: 30px;
 }
 nav li a{
     text-decoration: none;
+    color: black;
+}
+
+nav li:hover{
+    background-color: yellowgreen;
 }
