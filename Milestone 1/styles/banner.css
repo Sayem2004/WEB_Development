@@ -19,12 +19,20 @@ body{
     background-color: rgb(192, 174, 208);
     padding: 15px;
     font-size: 1.5em;
+    /* border-radius: 10px; */
 
 
 }
 .hero-container button:hover{
     background-color: rgb(16, 232, 9);
-    padding: 10px 30px;
+    padding: 10px 10px;
+    font-size: 1.2em;
+    border-radius: 7px;
+    
+}
+.hero-container button{
+    background-color: rgb(195, 232, 9);
+    padding: 10px 10px;
     font-size: 1.2em;
     border-radius: 7px;
     
