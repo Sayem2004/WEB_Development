@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Positions</title>
-</head>
+
+    <style>
+        .box {
+            border: 2px dotted skyblue;
+            width: 300px;
+        }
+
+        .ring {
+            position: relative;
+        }
+    </style>
+
 <body>
     <h3>CSS Positions </h3>
     <ol>
+        <!-- Floe related -->
         <li>Static</li>
-        <li>Relative</li>
+        <li>Relative: <small>current position er koto tuku change hobe. and will not live the current spot </small> </li>
         <li>Absulate</li>
+        <!-- scroll related  -->
         <li>Fixed</li>
         <li>Sticky </li>
     </ol>
     <div class="swim-container">
-        <div class="box boy"><img src="swim/boy.svg" alt="">
-         </div>
-        <div class="box ring"><img src="swim/ring.svg" alt=""></div>
-        <div class="box water"><img src="swim/water.svg" alt=""></div>
+        <div class="box boy "><img src="../pictures/boy.svg" alt=""></div>
+        <div class="box ring"><img src="../pictures/ring.svg " alt=""></div>
+        <div class="box water"><img src="../pictures/water.svg" alt=""></div>
+
     </div>
 
     <h2>Good Morning</h2>
 </body>
+
 </html>
