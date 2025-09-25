@@ -7,14 +7,28 @@
     <title>CSS Positions</title>
 
     <style>
+        .swim-container{
+            position: relative;
+            border: 2px solid yellow;
+        }
         .box {
             border: 2px dotted skyblue;
             width: 300px;
         }
-
+/* 
         .ring {
             position: relative;
-        }
+            left: 50px;
+            top: +30px;
+        } */
+        /* .ring{
+            position: absolute;
+            top: 40px;
+            left: 300px;
+        } */
+
+
+
     </style>
 
 <body>
@@ -23,7 +37,7 @@
         <!-- Floe related -->
         <li>Static</li>
         <li>Relative: <small>current position er koto tuku change hobe. and will not live the current spot </small> </li>
-        <li>Absulate</li>
+        <li>Absulate: <small>Lose it's won positiion and will move based on the root. If jodi parents er position deoya thake tahole tar upore deppend kore change hobe </small>  </li>
         <!-- scroll related  -->
         <li>Fixed</li>
         <li>Sticky </li>
