@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calender</title>
     <style>
-        .calender{
+        .calender {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             row-gap: 20px;
             column-gap: 10px;
         }
-        .date, .day{
+
+        .date,
+        .day {
             background-color: rgb(235, 216, 192);
             border-radius: 5px;
             height: 50px;
@@ -20,14 +23,19 @@
             justify-content: center;
             align-items: center;
             font-size: 2em;
+            box-shadow: rgb(103, 104, 105) 5px 5px;
+
 
         }
-        .day{
+
+        .day {
             background-color: brown;
             color: white;
+
         }
     </style>
 </head>
+
 <body>
     <div class="calender">
         <div class="day">S</div>
@@ -72,9 +80,10 @@
         <div class="date">30</div>
         <div class="date">1</div>
         <div class="date">2</div>
-        
+
     </div>
 
-    
+
 </body>
+
 </html>
