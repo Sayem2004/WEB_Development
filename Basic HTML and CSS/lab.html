@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration</title>
+</head>
+
+<body>
+
+<h2>Event Registration</h2>
+
+<form id="regForm">
+    <label>Full Name:</label><br>
+    <input type="text" id="name"><br>
+    <small id="nameError" style="color:red"></small><br><br>
+
+    <label>Email:</label><br>
+    <input type="text" id="email"><br>
+    <small id="emailError" style="color:red"></small><br><br>
+
+    <label>Company/Institution (Optional):</label><br>
+    <input type="text" id="company"><br><br>
+
+    <label>Attendance Type:</label><br>
+    <input type="radio" name="type" value="Virtual"> Virtual  
+    <input type="radio" name="type" value="In-Person"> In-Person  
+    <br>
+    <small id="typeError" style="color:red"></small><br><br>
+
+    <button type="button" onclick="register()">Register</button>
+</form>
+
+<hr>
+
+<button onclick="toggleStats()" id="statsBtn">Show Event Analytics</button>
+
+<div id="stats" style="display:none; margin-top:20px;">
+    <h3>Event Analytics</h3>
+    <p id="total"></p>
+    <p id="virtual"></p>
+    <p id="inperson"></p>
+</div>
+
+
+<script>
+// Data stored here (no database)
+let registrations = [];
+
+// Registration Function
+function register() {
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let company = document.getElementById("company").value.trim();
+    let type = document.querySelector("input[name='type']:checked");
+
+    let valid = true;
+
+    // Name validation
+    if (name.length < 6 || name.length > 100) {
+        document.getElementById("nameError").innerText = 
+            "Name must be between 6 and 100 characters.";
+        valid = false;
+    } else {
+        document.getElementById("nameError").innerText = "";
+    }
+
+    // Email validation
+    if (!email.includes("@") || !email.includes(".")) {
+        document.getElementById("emailError").innerText = 
+            "Please enter a valid professional email address.";
+        valid = false;
+    } else {
+        document.getElementById("emailError").innerText = "";
+    }
+
+    // Attendance type validation
+    if (!type) {
+        document.getElementById("typeError").innerText = 
+            "Please select your attendance type.";
+        valid = false;
+    } else {
+        document.getElementById("typeError").innerText = "";
+    }
+
+    if (!valid) return;
+
+    // Save data
+    registrations.push({
+        name: name,
+        email: email,
+        company: company,
+        type: type.value
+    });
+
+    alert("Registration Successful!");
+}
+
+
+// Show/Hide Analytics
+function toggleStats() {
+    let statsDiv = document.getElementById("stats");
+    let btn = document.getElementById("statsBtn");
+
+    if (statsDiv.style.display === "none") {
+        updateStats();
+        statsDiv.style.display = "block";
+        btn.innerText = "Hide Event Analytics";
+    } else {
+        statsDiv.style.display = "none";
+        btn.innerText = "Show Event Analytics";
+    }
+}
+
+// Update stats
+function updateStats() {
+    let virtualCount = registrations.filter(r => r.type === "Virtual").length;
+    let inPersonCount = registrations.filter(r => r.type === "In-Person").length;
+
+    document.getElementById("total").innerText = 
+        "Total Registrants: " + registrations.length;
+
+    document.getElementById("virtual").innerText = 
+        "Virtual: " + virtualCount;
+
+    document.getElementById("inperson").innerText = 
+        "In-Person: " + inPersonCount;
+}
+</script>
+
+</body>
+</html>
